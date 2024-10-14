@@ -156,7 +156,7 @@
     <ClCompile Include="source\UI\UIElement\RectangleShapeView.cpp" />
     <ClCompile Include="source\UI\UIElement\TextView.cpp" />
     <ClCompile Include="source\UI\UIElement\UIView.cpp" />
-    <ClCompile Include="source\UI\UISerive.cpp" />
+    <ClCompile Include="source\UI\UIService.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Event\EventService.h" />
