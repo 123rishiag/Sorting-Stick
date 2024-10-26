@@ -266,7 +266,7 @@ namespace Gameplay
 
 				sticks[j + 1] = key;
 				number_of_array_access++;
-				sticks[j + 1]->stick_view->setFillColor(collection_model->placement_position_element_color); // Placed key is green indicating it's sorted
+				sticks[j + 1]->stick_view->setFillColor(collection_model->temporary_processing_color); // Temporary key is yellow
 				sound->playSound(SoundType::COMPARE_SFX);
 				updateStickPosition(); // Final visual update for this iteration
 				std::this_thread::sleep_for(std::chrono::milliseconds(current_operation_delay));
