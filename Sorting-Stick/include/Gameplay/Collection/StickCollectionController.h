@@ -50,6 +50,7 @@ namespace Gameplay
             void processSortThreadState();
 
             void processBubbleSort();
+            void processInsertionSort();
 
             void setCompletedColor();
 
