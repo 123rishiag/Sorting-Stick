@@ -15,10 +15,11 @@ namespace UI
 
 			const float text_y_position = 36.f;
 			const float text_y_pos2 = 76.f;
-			const float search_type_text_x_position = 60.f;
-			const float comparisons_text_x_position = 580.f;
-			const float array_access_text_x_position = 1170.f;
 
+
+			const float search_type_text_x_position = 60.f;
+			const float comparisons_text_x_position = 687.f;
+			const float array_access_text_x_position = 1250.f;
 			const float num_sticks_text_x_position = 60.f;
 			const float delay_text_x_position = 687.f;
 			const float time_complexity_text_x_position = 1250.f;

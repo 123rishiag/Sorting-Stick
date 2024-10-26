@@ -5,6 +5,12 @@ namespace Gameplay
 {
     namespace Collection
     {
+        enum class SortState
+        {
+            SORTING,
+            NOT_SORTING,
+        };
+
         enum class SortType
         {
             BUBBLE_SORT,
@@ -18,11 +24,11 @@ namespace Gameplay
         class StickCollectionModel
         {
         public:
-            int number_of_elements = 50;
+            int number_of_elements = 20;
             const float max_element_height = 820.f;
             float elements_spacing = 25.f; //acttual amount of spacing between sticks
-            float space_percentage = 0.40f; //the percentage of the screen space allocated to spacing (0 - 1)
             const float element_y_position = 1020.f;
+            float space_percentage = 0.10f; //the percentage of the screen space allocated to spacing (0 - 1)
 
             const sf::Color element_color = sf::Color::White;
             const sf::Color processing_element_color = sf::Color::Red;
@@ -30,6 +36,7 @@ namespace Gameplay
             const sf::Color selected_element_color = sf::Color::Blue;
 
             const long operation_delay = 150;
+            const long initial_color_delay = 40;
 
             StickCollectionModel();
             ~StickCollectionModel();
