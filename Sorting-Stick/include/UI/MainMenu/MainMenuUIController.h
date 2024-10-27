@@ -3,6 +3,7 @@
 #include "UI/Interface/IUIController.h"
 #include "UI/UIElement/ImageView.h"
 #include "UI/UIElement/ButtonView.h"
+#include "Gameplay/Collection/StickCollectionModel.h"
 
 namespace UI
 {
@@ -46,6 +47,8 @@ namespace UI
 			void initializeButtons();
 			void registerButtonCallback();
 
+
+			void generalSortButtonCallback(Gameplay::Collection::SortType sort_type);
 			void bubbleSortButtonCallback();
 			void insertionSortButtonCallback();
 			void selectionSortButtonCallback();
