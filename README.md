@@ -32,7 +32,7 @@ Welcome to **Sorting Stick**, a project created to visually demonstrate and comp
   - **Controllers**: `GameplayController`, `StickCollectionController`
   - **Models**: `StickCollectionModel`
   - **Views**: `GameplayView`, `StickCollectionView`
-  - **Stick**: Structure representing the stick data in the search algorithms.
+  - **Stick**: Structure representing the stick data in the sorting algorithms.
 
 ### Additional Core Components
 - **Main**: Entry point of the game.
