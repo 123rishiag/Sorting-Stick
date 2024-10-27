@@ -24,7 +24,7 @@ namespace Gameplay
         class StickCollectionModel
         {
         public:
-            int number_of_elements = 20;
+            int number_of_elements = 30;
             const float max_element_height = 820.f;
             float elements_spacing = 25.f; //acttual amount of spacing between sticks
             const float element_y_position = 1020.f;
