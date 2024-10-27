@@ -41,6 +41,7 @@ namespace Gameplay
             float calculateStickHeight(int array_pos);
 
             void updateStickPosition();
+            void updateStickPosition(int i);
             void shuffleSticks();
             bool compareSticksByData(const Stick* a, const Stick* b) const;
 
@@ -64,6 +65,10 @@ namespace Gameplay
             void processQuickSort();
             void quickSort(int left, int right);
             int partition(int left, int right);
+
+            void processRadixSort();
+            void radixSort();
+            void countSort(int exponent);
 
             void setCompletedColor();
 

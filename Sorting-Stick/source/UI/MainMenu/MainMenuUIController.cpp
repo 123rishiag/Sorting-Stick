@@ -78,48 +78,45 @@ namespace UI
             selection_sort_button->registerCallbackFuntion(std::bind(&MainMenuUIController::selectionSortButtonCallback, this));
             merge_sort_button->registerCallbackFuntion(std::bind(&MainMenuUIController::mergeSortButtonCallback, this));
             quick_sort_button->registerCallbackFuntion(std::bind(&MainMenuUIController::quickSortButtonCallback, this));
-            //radix_sort_button->registerCallbackFuntion(std::bind(&MainMenuUIController::radixSortButtonCallback, this));
+            radix_sort_button->registerCallbackFuntion(std::bind(&MainMenuUIController::radixSortButtonCallback, this));
             quit_button->registerCallbackFuntion(std::bind(&MainMenuUIController::quitButtonCallback, this));
+        }
+
+        void MainMenuUIController::generalSortButtonCallback(Gameplay::Collection::SortType sort_type)
+        {
+            ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::BUTTON_CLICK);
+            GameService::setGameState(GameState::GAMEPLAY);
+            ServiceLocator::getInstance()->getGameplayService()->sortElement(sort_type);
         }
 
         void MainMenuUIController::bubbleSortButtonCallback()
         {
-            ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::BUTTON_CLICK);
-            GameService::setGameState(GameState::GAMEPLAY);
-            ServiceLocator::getInstance()->getGameplayService()->sortElement(Gameplay::Collection::SortType::BUBBLE_SORT);
+            generalSortButtonCallback(Gameplay::Collection::SortType::BUBBLE_SORT);
         }
 
         void MainMenuUIController::insertionSortButtonCallback()
         {
-            ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::BUTTON_CLICK);
-            GameService::setGameState(GameState::GAMEPLAY);
-            ServiceLocator::getInstance()->getGameplayService()->sortElement(Gameplay::Collection::SortType::INSERTION_SORT);
+            generalSortButtonCallback(Gameplay::Collection::SortType::INSERTION_SORT);
         }
 
         void MainMenuUIController::selectionSortButtonCallback()
         {
-            ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::BUTTON_CLICK);
-            GameService::setGameState(GameState::GAMEPLAY);
-            ServiceLocator::getInstance()->getGameplayService()->sortElement(Gameplay::Collection::SortType::SELECTION_SORT);
+            generalSortButtonCallback(Gameplay::Collection::SortType::SELECTION_SORT);
         }
 
         void MainMenuUIController::mergeSortButtonCallback()
         {
-            ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::BUTTON_CLICK);
-            GameService::setGameState(GameState::GAMEPLAY);
-            ServiceLocator::getInstance()->getGameplayService()->sortElement(Gameplay::Collection::SortType::MERGE_SORT);
+            generalSortButtonCallback(Gameplay::Collection::SortType::MERGE_SORT);
         }
 
         void MainMenuUIController::quickSortButtonCallback()
         {
-            ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::BUTTON_CLICK);
-            GameService::setGameState(GameState::GAMEPLAY);
-            ServiceLocator::getInstance()->getGameplayService()->sortElement(Gameplay::Collection::SortType::QUICK_SORT);
+            generalSortButtonCallback(Gameplay::Collection::SortType::QUICK_SORT);
         }
 
         void MainMenuUIController::radixSortButtonCallback()
         {
-            ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::BUTTON_CLICK);
+            generalSortButtonCallback(Gameplay::Collection::SortType::RADIX_SORT);
         }
 
         void MainMenuUIController::quitButtonCallback()
